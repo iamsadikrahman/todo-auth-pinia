@@ -42,6 +42,7 @@ const taskStore = defineStore('tasks', ()=>{
         return result.length;
       }
 
+
       
 
       return {
@@ -49,7 +50,7 @@ const taskStore = defineStore('tasks', ()=>{
         createNewTask,
         deleteTask,
         getRemainingTask,
-        getCompletedTask
+        getCompletedTask,
       }
 })
 

@@ -2,7 +2,7 @@
 
 import { ref,reactive, onMounted } from 'vue'
 
-import taskStore from '../store/store'
+import taskStore from '../store/tasksStore'
 
 const tasks = taskStore()
 
@@ -33,7 +33,7 @@ const tasks = taskStore()
         <div v-for="(task, index) in tasks.data.tasks"
         :key="index" class="border py-5 bg-purple-300 px-10 flex justify-between items-center">
            <div class="flex justify-center items-center">
-            <span class="mr-2"><input class="w-6 h-6" type="checkbox" v-model="task.completeInput" value="false">
+            <span class=" flex items-center space-x-2"><input class="w-6 h-6" type="checkbox" v-model="task.completeInput" value="false">
                 <h2 :class="task.completeInput ? 'line-through' : '' " class="text-2xl font-semibold">{{ task.showTaskName }}</h2>
             </span>
             
